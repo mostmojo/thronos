@@ -30,19 +30,18 @@
 }
 
 // Set the global font size and box-sizing. Use 1rem = 10px to make calculations easier as we progress.
+// 1rem = 10px, 10px is what we want to make things easier. 16px is default. So, 10px/16px = 62.5%.
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // 1rem = 10px, 10px is what we want to make things easier. 16px is default. So, 10px/16px = 62.5%;
+  font-size: 62.5%;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  color: var(
-    --color-grey-dark-2
-  ); // var(--variable) is common in CSS so don't need to use SASS $vars
+  color: var(--color-grey-dark-2);
   background-image: linear-gradient(
     to right bottom,
     var(--color-primary-light),
