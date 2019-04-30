@@ -488,10 +488,13 @@
   );
   color: #fff;
   position: relative;
+  overflow: hidden;
 
   &__visible {
     display: inline-block;
     padding: 2rem 7.5rem;
+    height: 100%;
+    width: 100%;
   }
 
   &__invisible {
@@ -502,5 +505,14 @@
     width: 100%;
     left: 0;
     top: -100%;
+    transition: all 0.2s;
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
   }
 }

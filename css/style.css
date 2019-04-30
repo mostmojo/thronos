@@ -340,10 +340,13 @@ body {
   border: none;
   background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
   color: #fff;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .btn__visible {
     display: inline-block;
-    padding: 2rem 7.5rem; }
+    padding: 2rem 7.5rem;
+    height: 100%;
+    width: 100%; }
   .btn__invisible {
     display: inline-block;
     position: absolute;
@@ -351,7 +354,12 @@ body {
     height: 100%;
     width: 100%;
     left: 0;
-    top: -100%; }
+    top: -100%;
+    transition: all 0.2s; }
+  .btn:hover .btn__visible {
+    transform: translateY(100%); }
+  .btn:hover .btn__invisible {
+    top: 0; }
 
 .container {
   max-width: 120rem;
