@@ -458,3 +458,18 @@
     z-index: 1;
   }
 }
+
+// ************* //
+// cta
+
+.cta {
+  padding: 3.5rem 0;
+  text-align: center;
+
+  &__book-now {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+  }
+}
