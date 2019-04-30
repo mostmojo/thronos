@@ -480,6 +480,7 @@
   text-transform: uppercase;
   border-radius: 100px;
   border: none;
+  cursor: pointer;
 
   background-image: linear-gradient(
     to right,
@@ -490,22 +491,30 @@
   position: relative;
   overflow: hidden;
 
-  &__visible {
+  & > * {
     display: inline-block;
-    padding: 2rem 7.5rem;
     height: 100%;
     width: 100%;
+    transition: all 0.2s;
+  }
+
+  &__visible {
+    padding: 2rem 7.5rem;
   }
 
   &__invisible {
-    display: inline-block;
     position: absolute;
     padding: 2rem 0;
-    height: 100%;
-    width: 100%;
     left: 0;
     top: -100%;
-    transition: all 0.2s;
+  }
+
+  &:hover {
+    background-image: linear-gradient(
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
   }
 
   &:hover &__visible {
@@ -514,5 +523,10 @@
 
   &:hover &__invisible {
     top: 0;
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulsate 1s infinite;
   }
 }
